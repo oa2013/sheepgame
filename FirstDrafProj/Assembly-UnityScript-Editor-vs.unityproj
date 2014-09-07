@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\CreatePrefab.js" />
      <Compile Include="Assets\Editor\CreateProjectFolders.js" />
+     <None Include="Assets\Standard Assets\water well\readme.txt" />
+     <None Include="Assets\Single_rock\readme.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
  <Reference Include="UnityEditor.Graphs">
