@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: f07411673907e6942bcc84ad16cb431c
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Armature|back.leg.l
+    100004: Armature|back.leg.r
+    100006: Armature|front.leg.l
+    100008: Armature|front.leg.r
+    100010: Armature|hip.l
+    100012: Armature|hip.r
+    100014: Armature|neck
+    100016: Armature|shoulder.l
+    100018: Armature|shoulder.r
+    100020: Armature|skull
+    100022: Armature|spine1
+    100024: Armature|spine2
+    100026: Armature|spine3
+    100028: Head
+    100030: LeftEye
+    100032: RightEye
+    100034: //RootNode
+    400000: Armature
+    400002: Armature|back.leg.l
+    400004: Armature|back.leg.r
+    400006: Armature|front.leg.l
+    400008: Armature|front.leg.r
+    400010: Armature|hip.l
+    400012: Armature|hip.r
+    400014: Armature|neck
+    400016: Armature|shoulder.l
+    400018: Armature|shoulder.r
+    400020: Armature|skull
+    400022: Armature|spine1
+    400024: Armature|spine2
+    400026: Armature|spine3
+    400028: Head
+    400030: LeftEye
+    400032: RightEye
+    400034: //RootNode
+    2300000: LeftEye
+    2300002: RightEye
+    3300000: LeftEye
+    3300002: RightEye
+    4300000: Head
+    4300002: RightEye
+    4300004: LeftEye
+    7400000: SkinnySheepWalkCycle
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Head
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: SkinnySheepWalkCycle
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Armature|hip.l
+        weight: 1
+      - path: Armature/Armature|hip.l/Armature|back.leg.l
+        weight: 1
+      - path: Armature/Armature|hip.r
+        weight: 1
+      - path: Armature/Armature|hip.r/Armature|back.leg.r
+        weight: 1
+      - path: Armature/Armature|spine1
+        weight: 1
+      - path: Armature/Armature|spine1/Armature|spine2
+        weight: 1
+      - path: Armature/Armature|spine1/Armature|spine2/Armature|spine3
+        weight: 1
+      - path: Armature/Armature|spine1/Armature|spine2/Armature|spine3/Armature|neck
+        weight: 1
+      - path: Armature/Armature|spine1/Armature|spine2/Armature|spine3/Armature|neck/Armature|skull
+        weight: 1
+      - path: Armature/Armature|spine1/Armature|spine2/Armature|spine3/Armature|shoulder.l
+        weight: 1
+      - path: Armature/Armature|spine1/Armature|spine2/Armature|spine3/Armature|shoulder.l/Armature|front.leg.l
+        weight: 1
+      - path: Armature/Armature|spine1/Armature|spine2/Armature|spine3/Armature|shoulder.r
+        weight: 1
+      - path: Armature/Armature|spine1/Armature|spine2/Armature|spine3/Armature|shoulder.r/Armature|front.leg.r
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: LeftEye
+        weight: 1
+      - path: RightEye
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
