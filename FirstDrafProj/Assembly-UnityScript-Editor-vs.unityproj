@@ -49,10 +49,8 @@
      <Compile Include="Assets\Editor\CreatePrefab.js" />
      <Compile Include="Assets\Editor\CreateProjectFolders.js" />
      <None Include="Assets\Standard Assets\water well\readme.txt" />
-     <None Include="Assets\Fur\Support\Fur.shader" />
      <None Include="Assets\Single_rock\readme.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\Fur\Support\FurHelpers.cginc" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/OA/Desktop/MasterFiles/USC_2011_2014/CSCE552/sheepgame/FirstDrafProj/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>

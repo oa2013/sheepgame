@@ -46,14 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Fur\Support\SynchronizeLights.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\SheepMovement.cs" />
      <None Include="Assets\Standard Assets\water well\readme.txt" />
-     <None Include="Assets\Fur\Support\Fur.shader" />
      <None Include="Assets\Single_rock\readme.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\Fur\Support\FurHelpers.cginc" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
   </ItemGroup>
   <ItemGroup>
