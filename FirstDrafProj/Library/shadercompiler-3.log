@@ -1,0 +1,28 @@
+Base path: C:/Program Files (x86)/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-3-9532
+Cmd: getPlatforms
+Cmd: compileSnippet
+  error: 2 plat 1 at /FurHelpers.cginc(57): expression left of ."fog" is not a struct or array
+  api=1 type=0 insize=340 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 1 at /FurHelpers.cginc(57): expression left of ."fog" is not a struct or array
+  api=1 type=0 insize=341 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 1 at /FurHelpers.cginc(57): expression left of ."fog" is not a struct or array
+  api=1 type=0 insize=343 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 1 at /FurHelpers.cginc(57): expression left of ."fog" is not a struct or array
+  api=1 type=0 insize=342 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 1 at /FurHelpers.cginc(57): expression left of ."fog" is not a struct or array
+  api=1 type=0 insize=343 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 1 at /FurHelpers.cginc(57): expression left of ."fog" is not a struct or array
+  api=1 type=0 insize=342 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 1 at /FurHelpers.cginc(57): expression left of ."fog" is not a struct or array
+  api=1 type=0 insize=342 outsize=0 kw= ok=0
+Unhandled exception: Readfile from pipe failed. GLE=The pipe has been ended.
+
+
+Quitting shader compiler process

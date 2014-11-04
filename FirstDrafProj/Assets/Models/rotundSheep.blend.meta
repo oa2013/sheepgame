@@ -64,7 +64,7 @@ ModelImporter:
     13700008: leg_front_left
     13700010: leg_front_right
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:

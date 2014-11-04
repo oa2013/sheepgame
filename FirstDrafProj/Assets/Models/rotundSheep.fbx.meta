@@ -23,6 +23,8 @@ ModelImporter:
     100034: shoulder.r
     100036: Spine
     100038: Mesh
+    100040: Camera
+    100042: Lamp
     400000: Armature
     400002: back_leg.l
     400004: back_leg.r
@@ -43,6 +45,8 @@ ModelImporter:
     400034: shoulder.r
     400036: Spine
     400038: Mesh
+    400040: Camera
+    400042: Lamp
     2300000: Mesh
     3300000: Mesh
     4300000: leg.back.left

@@ -1,11 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SheepMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Fur\Support\Fur.shader">
     <Files>
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SheepMovement.cs" Line="8" Column="30" />
-      <File FileName="../../JJ Demo/Assets/Scripts/ProximitySwarm.cs" Line="1" Column="1" />
-      <File FileName="../../JJ Demo/Assets/Scripts/Swarm.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fur\Support\Fur.shader" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
