@@ -70,6 +70,13 @@ ModelImporter:
     400062: upper_leg.l
     400064: upper_leg.r
     4300000: Low Poly Characte.000
+    7400000: Armature|ArmatureAction
+    7400002: Armature|ArmatureAction.001
+    7400004: Armature|Empty
+    7400006: Armature|Jump
+    7400008: Armature|PickUp
+    7400010: Armature|RunCycle
+    7400012: Low Poly Characte.000|Empty
     9500000: //RootNode
     13700000: Low Poly Characte.000
   materials:
