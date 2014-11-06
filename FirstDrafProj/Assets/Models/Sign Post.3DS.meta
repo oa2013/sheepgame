@@ -1,31 +1,29 @@
 fileFormatVersion: 2
-guid: 8a6b3eae970929240abcc6dd91d5ede6
+guid: 9229644ecd0793b43a095d6895044d03
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Baloon
-    100004: GeoSphere01
-    100006: Line01
-    100008: Line02
-    400000: //RootNode
-    400002: Baloon
-    400004: GeoSphere01
-    400006: Line01
-    400008: Line02
-    2300000: //RootNode
-    2300002: GeoSphere01
-    2300004: Line01
-    2300006: Line02
-    3300000: //RootNode
-    3300002: GeoSphere01
-    3300004: Line01
-    3300006: Line02
-    4300000: Layer_AVLA
-    4300002: Line01
-    4300004: GeoSphere01
-    4300006: Line02
-    7400000: Take 001
+    100000: ChamferCyl
+    100002: Foliage01
+    100004: Rectangle0
+    100006: Rectangle1
+    100008: //RootNode
+    400000: ChamferCyl
+    400002: Foliage01
+    400004: Rectangle0
+    400006: Rectangle1
+    400008: //RootNode
+    2300000: ChamferCyl
+    2300002: Foliage01
+    2300004: Rectangle0
+    2300006: Rectangle1
+    3300000: ChamferCyl
+    3300002: Foliage01
+    3300004: Rectangle0
+    3300006: Rectangle1
+    4300000: ChamferCyl
+    4300002: Rectangle0
+    4300004: Foliage01
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -46,7 +44,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: .100000001
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
