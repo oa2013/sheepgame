@@ -12,6 +12,8 @@ public class SheepMovement : MonoBehaviour
 
 	//GameObject	player;
 	public SheepState	currState;
+
+	Animation	childAnimation;
 	Vector3		startAngle;
 	Vector3		endAngle;
 	float		currMoveSpeed;
@@ -23,6 +25,7 @@ public class SheepMovement : MonoBehaviour
 	{
 		//player = GameObject.Find("Player");
 		currState = SheepState.Grazing;
+		childAnimation = GetComponentInChildren<Animation> ();
 		startAngle = transform.eulerAngles;
 		endAngle = transform.eulerAngles;
 		currMoveSpeed = 0;
@@ -33,12 +36,14 @@ public class SheepMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if(currState != SheepState.Running && Time.time-stateTime > randTime)
+		if(currState != SheepState.Running && currState != SheepState.Carried && Time.time-stateTime > randTime)
 		{
 			SwitchStates();
 			stateTime = Time.time;
 			randTime = Random.Range(minActionTime,maxActionTime);
 		}
+		else if(currState == SheepState.Carried && transform.position != transform.parent.position)
+		{	transform.position = Vector3.Lerp(transform.position,transform.parent.position,Time.deltaTime);	}
 
 		transform.Translate(Vector3.forward*currMoveSpeed*Time.deltaTime);
 		float t = (Time.time - stateTime)/4;
@@ -53,9 +58,15 @@ public class SheepMovement : MonoBehaviour
 		print("switch");
 		int randNum = Random.Range(0,2);
 		if(randNum == 0)
-		{	Graze();	}
+		{
+			Graze();
+			//childAnimation.CrossFade("Armature|HeadNod");
+		}
 		else
-		{	Wander();	}
+		{
+			Wander();
+			//childAnimation.CrossFade("Armature|WalkCycle");
+		}
 	}
 
 	void Graze()
@@ -72,5 +83,14 @@ public class SheepMovement : MonoBehaviour
 		currMoveSpeed = walkSpeed;
 		startAngle = transform.eulerAngles;
 		endAngle = transform.eulerAngles + new Vector3(0,Random.Range(-90,90),0);
+	}
+
+	void Lift(Transform liftNode)
+	{
+		currState = SheepState.Carried;
+		currMoveSpeed = 0;
+		childAnimation.CrossFade ("SheepLift");
+		transform.parent = liftNode;
+		GetComponent<Rigidbody> ().useGravity = false;
 	}
 }
