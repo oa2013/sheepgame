@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: 4d46ce756d1382b438fae9fbcb4ca18b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: girl_girl
+    100004: girl_hair
+    100006: girl_hair_band_left
+    100008: girl_hair_band_right
+    100010: girl_jacket
+    100012: girl_left_eye1
+    100014: girl_left_eyebrow
+    100016: girl_left_shoe
+    100018: girl_left_sock
+    100020: girl_right_eyebrow
+    100022: girl_right_shoe
+    100024: girl_right_sock
+    100026: girl_skirt
+    100028: girl_t_shirt
+    100030: left_eye_girl
+    400000: //RootNode
+    400002: girl_girl
+    400004: girl_hair
+    400006: girl_hair_band_left
+    400008: girl_hair_band_right
+    400010: girl_jacket
+    400012: girl_left_eye1
+    400014: girl_left_eyebrow
+    400016: girl_left_shoe
+    400018: girl_left_sock
+    400020: girl_right_eyebrow
+    400022: girl_right_shoe
+    400024: girl_right_sock
+    400026: girl_skirt
+    400028: girl_t_shirt
+    400030: left_eye_girl
+    2300000: girl_girl
+    2300002: girl_hair
+    2300004: girl_hair_band_left
+    2300006: girl_hair_band_right
+    2300008: girl_jacket
+    2300010: girl_left_eye1
+    2300012: girl_left_eyebrow
+    2300014: girl_left_shoe
+    2300016: girl_left_sock
+    2300018: girl_right_eyebrow
+    2300020: girl_right_shoe
+    2300022: girl_right_sock
+    2300024: girl_skirt
+    2300026: girl_t_shirt
+    2300028: left_eye_girl
+    3300000: girl_girl
+    3300002: girl_hair
+    3300004: girl_hair_band_left
+    3300006: girl_hair_band_right
+    3300008: girl_jacket
+    3300010: girl_left_eye1
+    3300012: girl_left_eyebrow
+    3300014: girl_left_shoe
+    3300016: girl_left_sock
+    3300018: girl_right_eyebrow
+    3300020: girl_right_shoe
+    3300022: girl_right_sock
+    3300024: girl_skirt
+    3300026: girl_t_shirt
+    3300028: left_eye_girl
+    4300000: girl_girl
+    4300002: girl_hair
+    4300004: girl_hair_band_left
+    4300006: girl_hair_band_right
+    4300008: girl_jacket
+    4300010: girl_left_eye1
+    4300012: girl_left_eyebrow
+    4300014: girl_left_shoe
+    4300016: girl_left_sock
+    4300018: girl_right_eyebrow
+    4300020: girl_right_shoe
+    4300022: girl_right_sock
+    4300024: girl_skirt
+    4300026: girl_t_shirt
+    4300028: left_eye_girl
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

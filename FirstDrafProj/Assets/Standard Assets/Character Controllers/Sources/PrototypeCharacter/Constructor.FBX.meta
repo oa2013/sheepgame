@@ -7,34 +7,46 @@ ModelImporter:
     100002: Bip001 R Finger21
     100004: Bip001 R Finger11
     100006: Bip001 R Finger02
+    100008: girl_girl
     100010: Bip001 R Finger12
     100012: Bip001 R Finger41
     100014: Bip001 R Finger4
+    100016: girl_hair
     100018: Bip001 R Finger32
     100020: Bip001 R Finger31
     100022: Bip001 R Finger3
+    100024: girl_hair_band_left
     100026: hip_adjustment_bone_right
     100028: Bip001 R Finger42
+    100030: girl_hair_band_right
     100032: hip_adjustment_bone_left
     100034: Bip001 R Finger2
     100036: Bip001 R Finger22
+    100038: girl_jacket
     100040: Bip001 R UpperArm
     100042: Bip001 R Forearm
     100044: Bip001 R Finger0
     100046: Bip001 R Finger01
+    100048: girl_left_eye1
+    100050: girl_left_eyebrow
     100052: //RootNode
     100054: Bip001 R Clavicle
+    100056: girl_left_shoe
     100058: Bip001 L Finger3
     100060: Bip001 L Finger31
     100062: Bip001 L Finger32
+    100064: girl_left_sock
     100066: Bip001 L Finger4
     100068: Bip001 L Finger41
     100070: Bip001 L Finger42
+    100072: girl_right_eyebrow
     100074: Bip001 L Finger22
     100076: Bip001 L Finger02
+    100078: girl_right_shoe
     100080: Bip001 L Finger1
     100082: Bip001 L Finger11
     100084: Bip001 L Finger12
+    100086: girl_right_sock
     100088: Bip001 L Finger2
     100090: Bip001 L Finger21
     100092: Bip001 L Finger0
@@ -52,6 +64,7 @@ ModelImporter:
     100116: Bip001 L Calf
     100118: Bip001 L Thigh
     100120: helmet_bone
+    100122: girl_skirt
     100124: Bip001 Head
     100126: wrench
     100128: Bip001 R Hand
@@ -61,38 +74,52 @@ ModelImporter:
     100136: Bip001 Spine
     100138: Bip001 Pelvis
     100140: Bip001
+    100142: girl_t_shirt
+    100144: left_eye_girl
     400000: Bip001 R Finger1
     400002: Bip001 R Finger21
     400004: Bip001 R Finger11
     400006: Bip001 R Finger02
+    400008: girl_girl
     400010: Bip001 R Finger12
     400012: Bip001 R Finger41
     400014: Bip001 R Finger4
+    400016: girl_hair
     400018: Bip001 R Finger32
     400020: Bip001 R Finger31
     400022: Bip001 R Finger3
+    400024: girl_hair_band_left
     400026: hip_adjustment_bone_right
     400028: Bip001 R Finger42
+    400030: girl_hair_band_right
     400032: hip_adjustment_bone_left
     400034: Bip001 R Finger2
     400036: Bip001 R Finger22
+    400038: girl_jacket
     400040: Bip001 R UpperArm
     400042: Bip001 R Forearm
     400044: Bip001 R Finger0
     400046: Bip001 R Finger01
+    400048: girl_left_eye1
+    400050: girl_left_eyebrow
     400052: //RootNode
     400054: Bip001 R Clavicle
+    400056: girl_left_shoe
     400058: Bip001 L Finger3
     400060: Bip001 L Finger31
     400062: Bip001 L Finger32
+    400064: girl_left_sock
     400066: Bip001 L Finger4
     400068: Bip001 L Finger41
     400070: Bip001 L Finger42
+    400072: girl_right_eyebrow
     400074: Bip001 L Finger22
     400076: Bip001 L Finger02
+    400078: girl_right_shoe
     400080: Bip001 L Finger1
     400082: Bip001 L Finger11
     400084: Bip001 L Finger12
+    400086: girl_right_sock
     400088: Bip001 L Finger2
     400090: Bip001 L Finger21
     400092: Bip001 L Finger0
@@ -110,6 +137,7 @@ ModelImporter:
     400116: Bip001 L Calf
     400118: Bip001 L Thigh
     400120: helmet_bone
+    400122: girl_skirt
     400124: Bip001 Head
     400126: wrench
     400128: Bip001 R Hand
@@ -119,10 +147,57 @@ ModelImporter:
     400136: Bip001 Spine
     400138: Bip001 Pelvis
     400140: Bip001
+    400142: girl_t_shirt
+    400144: left_eye_girl
     2300000: wrench
+    2300002: girl_girl
+    2300004: girl_hair
+    2300006: girl_hair_band_left
+    2300008: girl_hair_band_right
+    2300010: girl_jacket
+    2300012: girl_left_eye1
+    2300014: girl_left_eyebrow
+    2300016: girl_left_shoe
+    2300018: girl_left_sock
+    2300020: girl_right_eyebrow
+    2300022: girl_right_shoe
+    2300024: girl_right_sock
+    2300026: girl_skirt
+    2300028: girl_t_shirt
+    2300030: left_eye_girl
     3300000: wrench
+    3300002: girl_girl
+    3300004: girl_hair
+    3300006: girl_hair_band_left
+    3300008: girl_hair_band_right
+    3300010: girl_jacket
+    3300012: girl_left_eye1
+    3300014: girl_left_eyebrow
+    3300016: girl_left_shoe
+    3300018: girl_left_sock
+    3300020: girl_right_eyebrow
+    3300022: girl_right_shoe
+    3300024: girl_right_sock
+    3300026: girl_skirt
+    3300028: girl_t_shirt
+    3300030: left_eye_girl
     4300000: construction_worker
     4300002: wrench
+    4300004: girl_girl
+    4300006: girl_hair
+    4300008: girl_hair_band_left
+    4300010: girl_hair_band_right
+    4300012: girl_jacket
+    4300014: girl_left_eye1
+    4300016: girl_left_eyebrow
+    4300018: girl_left_shoe
+    4300020: girl_left_sock
+    4300022: girl_right_eyebrow
+    4300024: girl_right_shoe
+    4300026: girl_right_sock
+    4300028: girl_skirt
+    4300030: girl_t_shirt
+    4300032: left_eye_girl
     7400012: idle
     7400014: run
     7400016: walk
