@@ -26,7 +26,8 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		Vector3 moveVect = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
 		moveVect *= (moveSpeed*Time.deltaTime);
-		transform.Translate(moveVect);//this is how we move it
+		rigidbody.MovePosition(rigidbody.position + moveVect);
+		//transform.Translate(moveVect);//this is how we move it
 		
 		if(Input.GetKeyDown(KeyCode.Space) && isTouchingGround == true)
 		{
