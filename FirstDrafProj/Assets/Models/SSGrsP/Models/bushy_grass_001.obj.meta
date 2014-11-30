@@ -1,0 +1,102 @@
+fileFormatVersion: 2
+guid: 3f66716de1e07b341a0e6576d5d58d5d
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: bushy_grass_AB_002_pPlane33
+    100004: bushy_grass_AB_002_pPlane38
+    100006: bushy_grass_AB_002_pPlane39
+    100008: bushy_grass_AB_002_pPlane40
+    100010: bushy_grass_AB_002_pPlane44
+    100012: bushy_grass_AB_002_pPlane50
+    100014: bushy_grass_AB_002_pPlane51
+    100016: pPlane29_bushy_grass_AB_002
+    400000: //RootNode
+    400002: bushy_grass_AB_002_pPlane33
+    400004: bushy_grass_AB_002_pPlane38
+    400006: bushy_grass_AB_002_pPlane39
+    400008: bushy_grass_AB_002_pPlane40
+    400010: bushy_grass_AB_002_pPlane44
+    400012: bushy_grass_AB_002_pPlane50
+    400014: bushy_grass_AB_002_pPlane51
+    400016: pPlane29_bushy_grass_AB_002
+    2300000: bushy_grass_AB_002_pPlane33
+    2300002: bushy_grass_AB_002_pPlane38
+    2300004: bushy_grass_AB_002_pPlane39
+    2300006: bushy_grass_AB_002_pPlane40
+    2300008: bushy_grass_AB_002_pPlane44
+    2300010: bushy_grass_AB_002_pPlane50
+    2300012: bushy_grass_AB_002_pPlane51
+    2300014: pPlane29_bushy_grass_AB_002
+    3300000: bushy_grass_AB_002_pPlane33
+    3300002: bushy_grass_AB_002_pPlane38
+    3300004: bushy_grass_AB_002_pPlane39
+    3300006: bushy_grass_AB_002_pPlane40
+    3300008: bushy_grass_AB_002_pPlane44
+    3300010: bushy_grass_AB_002_pPlane50
+    3300012: bushy_grass_AB_002_pPlane51
+    3300014: pPlane29_bushy_grass_AB_002
+    4300000: bushy_grass_AB_002_pPlane33
+    4300002: bushy_grass_AB_002_pPlane38
+    4300004: bushy_grass_AB_002_pPlane39
+    4300006: bushy_grass_AB_002_pPlane40
+    4300008: bushy_grass_AB_002_pPlane44
+    4300010: bushy_grass_AB_002_pPlane50
+    4300012: bushy_grass_AB_002_pPlane51
+    4300014: pPlane29_bushy_grass_AB_002
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 1
+  userData: 

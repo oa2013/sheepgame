@@ -1,0 +1,64 @@
+# XSI Wavefront OBJ Export v3.0
+# File Created: Mon Dec 09 14:38:08 2013
+# XSI Version: 11.0.525.0
+o 11.0.525.0
+mtllib big_bush.mtl
+
+
+# Hierarchy (from self to top father)
+g grid
+
+#begin 4 vertices
+v -2.065158 -1.135774 -0.822443
+v 2.065158 -1.135774 0.822443
+v -2.065158 3.310028 -0.822443
+v 2.065158 3.310028 0.822443
+#end 4 vertices
+
+#begin 4 normals
+vn 0.000000 0.000000 1.000000
+vn 0.000000 0.000000 1.000000
+vn 0.000000 0.000000 1.000000
+vn 0.000000 0.000000 1.000000
+#end 4 vertex normals
+
+#begin texture vertices
+vt 0.000000 1.000000 0.000000
+vt 0.000000 0.000000 0.000000
+vt 1.000000 1.000000 0.000000
+vt 1.000000 0.000000 0.000000
+#end 4 texture vertices
+
+#begin 1 faces
+usemtl scene_material
+f 1/1/1 2/2/2 4/4/3 3/3/4 
+#end 1 faces
+
+# Hierarchy (from self to top father)
+g grid1
+
+#begin 4 vertices
+v -2.099328 -1.135774 0.730827
+v 2.099328 -1.135774 -0.730827
+v -2.099328 3.310028 0.730827
+v 2.099328 3.310028 -0.730827
+#end 4 vertices
+
+#begin 4 normals
+vn -0.000000 0.000000 1.000000
+vn -0.000000 0.000000 1.000000
+vn -0.000000 0.000000 1.000000
+vn -0.000000 0.000000 1.000000
+#end 4 vertex normals
+
+#begin texture vertices
+vt 0.000000 0.000000 0.000000
+vt 1.000000 -0.000000 0.000000
+vt 0.000000 1.000000 0.000000
+vt 1.000000 1.000000 0.000000
+#end 4 texture vertices
+
+#begin 1 faces
+usemtl scene_material1
+f 5/5/5 6/6/6 8/8/7 7/7/8 
+#end 1 faces
