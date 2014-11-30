@@ -41,8 +41,7 @@ public class SheepMovement : MonoBehaviour
 			stateTime = Time.time;
 			randTime = Random.Range(minActionTime,maxActionTime);
 		}
-
-		transform.Translate(Vector3.forward*currMoveSpeed*Time.deltaTime);
+		rigidbody.MovePosition (transform.position + transform.forward * currMoveSpeed * Time.deltaTime);
 		float t = (Time.time - stateTime)/4;
 		if(t <= 1)
 		{	transform.eulerAngles = Vector3.Lerp(startAngle,endAngle,t);	}
