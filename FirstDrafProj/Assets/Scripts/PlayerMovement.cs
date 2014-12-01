@@ -8,15 +8,21 @@ using System.Collections.Generic;
 public class PlayerMovement : MonoBehaviour
 {
 	//Instance Variables
-	public CharacterController controller;
-	public float moveSpeed = 10;
-	public float jumpForce = 20;
-	bool isTouchingGround;
-	bool isNearSheep;
+	public float	moveSpeed = 10;
+	public float	rotateSpeed = 90;
+	public float	jumpForce = 20;
+	public bool	isTouchingGround;
+
+	CharacterController	controller;
+	girlController		girl;
+	
+	float	verticalSpeed = 0;
+	bool	isNearSheep;
 	// Use this for initialization
 	void Start ()
 	{
 		controller = GetComponent<CharacterController>();
+		girl = GetComponentInChildren<girlController>();
 		isTouchingGround = false;
 		isNearSheep = false;
 	}
@@ -28,31 +34,39 @@ public class PlayerMovement : MonoBehaviour
 	}
 	void KeyMovement()
 	{
-		Vector3 moveVect = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
+		Vector3 moveVect = new Vector3(0,0,Input.GetAxis("Vertical"));
+		moveVect = transform.TransformDirection(moveVect);
 		moveVect *= (moveSpeed*Time.deltaTime);
-		moveVect -= 9.8f*transform.up*Time.deltaTime;
+		if(isTouchingGround)
+		{	moveVect -= 9.8f*transform.up*Time.deltaTime;	}
+		else
+		{
+			moveVect += verticalSpeed*transform.up*Time.deltaTime;
+			verticalSpeed -= 9.8f*Time.deltaTime;
+		}
 		controller.Move(moveVect);
+
+		Vector3 rotateVect = new Vector3(0,Input.GetAxis("Horizontal"),0);
+		rotateVect *= (rotateSpeed*Time.deltaTime);
+		transform.Rotate(rotateVect);
 
 		//transform.Translate(moveVect, Space.Self);//this is how we move it
 		
 		if(Input.GetKeyDown(KeyCode.Space) && isTouchingGround == true)
 		{
-			rigidbody.AddForce(Vector3.up*jumpForce);	
+			girl.Jump();
+			verticalSpeed = 5;
+			isTouchingGround = false;
 		}
 	}
 	
-	void OnCollisionEnter(Collision colliInfo)
+	void OnControllerColliderHit(ControllerColliderHit hit)
 	{
-		if(colliInfo.gameObject.tag == "Ground")
+		if(hit.gameObject.tag == "Ground")
 		{
+			girl.EndJump();
+			verticalSpeed = 0;
 			isTouchingGround = true;
-		}
-	}
-	void OnCollisionExit(Collision colliInfo)
-	{
-		if(colliInfo.gameObject.tag == "Ground")
-		{
-			isTouchingGround = false;
 		}
 	}
 }

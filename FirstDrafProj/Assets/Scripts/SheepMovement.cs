@@ -51,7 +51,6 @@ public class SheepMovement : MonoBehaviour
 
 	void SwitchStates()
 	{
-		print("switch");
 		int randNum = Random.Range(0,2);
 		if(randNum == 0)
 		{	Graze();	}

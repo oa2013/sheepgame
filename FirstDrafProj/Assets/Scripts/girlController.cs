@@ -4,50 +4,34 @@ using System.Collections;
 public class girlController : MonoBehaviour 
 {
 	private Animator anim;
-	bool walkCycle = false;
+
+	PlayerMovement	move;
 
 	// Use this for initialization
 	void Start () 
 	{
 		anim = GetComponent<Animator>();
+		move = GetComponentInParent<PlayerMovement>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) 
-		{
-			if(!walkCycle)
-			{
-				walkCycle = true;
-				anim.SetBool("walk",true);
-			}
-
-		}
+		if((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && move.isTouchingGround)
+		{	anim.SetBool("walk",true);	}
 		else
-		{
-			anim.SetBool("walk", false);
-			walkCycle = false;
-		}
-
-		if (Input.GetKeyDown(KeyCode.E)) 
-		{
-			anim.SetBool("pickup", true);
-		} else 
-		{
-			anim.SetBool("pickup", false);
-		}
-
-		if (Input.GetKeyDown(KeyCode.Q)) 
-		{
-			anim.SetBool("jump", true);
-		} else 
-		{
-			anim.SetBool("jump", false);
-		}
-
-
+		{	anim.SetBool("walk", false);	}
+		if(Input.GetKeyDown(KeyCode.E)) 
+		{	anim.SetBool("pickup", true);	}
+		if(Input.GetKeyUp(KeyCode.E))
+		{	anim.SetBool("pickup", false);	}
 	}
+
+	public void Jump()
+	{	anim.SetBool("jump", true);	}
+
+	public void EndJump()
+	{	anim.SetBool ("jump", false);	}
 }
 
 
