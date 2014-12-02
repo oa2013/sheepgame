@@ -19,6 +19,8 @@ public class SheepMovement : MonoBehaviour
 	float		stateTime;
 	float		randTime;
 
+	private Animator anim;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -30,6 +32,7 @@ public class SheepMovement : MonoBehaviour
 		currMoveSpeed = 0;
 		stateTime = Time.time;
 		randTime = Random.Range(minActionTime,maxActionTime);
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -64,6 +67,10 @@ public class SheepMovement : MonoBehaviour
 		currMoveSpeed = 0;
 		startAngle = transform.eulerAngles;
 		endAngle = transform.eulerAngles;
+
+		anim.SetBool("sheepwalk",false);
+		anim.SetBool("headnod", true);
+	
 	}
 
 	void Wander()
@@ -72,5 +79,8 @@ public class SheepMovement : MonoBehaviour
 		currMoveSpeed = walkSpeed;
 		startAngle = transform.eulerAngles;
 		endAngle = transform.eulerAngles + new Vector3(0,Random.Range(-90,90),0);
+
+		anim.SetBool("sheepwalk",true);	
+		anim.SetBool("headnod", false);
 	}
 }

@@ -67,7 +67,9 @@ ModelImporter:
     7400018: Body|HeadShake
     7400020: Head|HeadShake
     7400022: Mesh|HeadShake
+    7400024: Armature|WalkCycle.0010
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Body
     13700002: Head
     13700004: leg.back.left
@@ -87,9 +89,219 @@ ModelImporter:
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 0
+    animationWrapMode: 2
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|WalkCycle.0010
+      takeName: Armature|WalkCycle.001
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/hip.l
+        weight: 1
+      - path: Armature/hip.l/back_leg.l
+        weight: 1
+      - path: Armature/hip.r
+        weight: 1
+      - path: Armature/hip.r/back_leg.r
+        weight: 1
+      - path: Armature/Spine
+        weight: 1
+      - path: Armature/Spine/Head 1
+        weight: 1
+      - path: Armature/Spine/Head 1/Head.001
+        weight: 1
+      - path: Armature/Spine/shoulder.l
+        weight: 1
+      - path: Armature/Spine/shoulder.l/front_leg.l
+        weight: 1
+      - path: Armature/Spine/shoulder.r
+        weight: 1
+      - path: Armature/Spine/shoulder.r/front_leg.r
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: leg.back.left
+        weight: 1
+      - path: leg.back.right
+        weight: 1
+      - path: leg.front.left
+        weight: 1
+      - path: leg.front.right
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|HeadShake.001
+      takeName: Armature|HeadShake.001
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/hip.l
+        weight: 1
+      - path: Armature/hip.l/back_leg.l
+        weight: 1
+      - path: Armature/hip.r
+        weight: 1
+      - path: Armature/hip.r/back_leg.r
+        weight: 1
+      - path: Armature/Spine
+        weight: 1
+      - path: Armature/Spine/Head 1
+        weight: 1
+      - path: Armature/Spine/Head 1/Head.001
+        weight: 1
+      - path: Armature/Spine/shoulder.l
+        weight: 1
+      - path: Armature/Spine/shoulder.l/front_leg.l
+        weight: 1
+      - path: Armature/Spine/shoulder.r
+        weight: 1
+      - path: Armature/Spine/shoulder.r/front_leg.r
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: leg.back.left
+        weight: 1
+      - path: leg.back.right
+        weight: 1
+      - path: leg.front.left
+        weight: 1
+      - path: leg.front.right
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|HeadNod.001
+      takeName: Armature|HeadNod.001
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/hip.l
+        weight: 1
+      - path: Armature/hip.l/back_leg.l
+        weight: 1
+      - path: Armature/hip.r
+        weight: 1
+      - path: Armature/hip.r/back_leg.r
+        weight: 1
+      - path: Armature/Spine
+        weight: 1
+      - path: Armature/Spine/Head 1
+        weight: 1
+      - path: Armature/Spine/Head 1/Head.001
+        weight: 1
+      - path: Armature/Spine/shoulder.l
+        weight: 1
+      - path: Armature/Spine/shoulder.l/front_leg.l
+        weight: 1
+      - path: Armature/Spine/shoulder.r
+        weight: 1
+      - path: Armature/Spine/shoulder.r/front_leg.r
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: leg.back.left
+        weight: 1
+      - path: leg.back.right
+        weight: 1
+      - path: leg.front.left
+        weight: 1
+      - path: leg.front.right
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -125,6 +337,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
