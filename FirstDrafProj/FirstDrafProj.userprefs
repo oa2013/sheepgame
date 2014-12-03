@@ -1,8 +1,18 @@
 ﻿<Properties>
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SheepMovement.cs">
     <Files>
       <File FileName="Assets\Scripts\SheepMovement.cs" Line="73" Column="2" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/girlController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/girlController.cs" Line="24" Column="5" />
+      <File FileName="Assets/Scripts/SheepMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SheepPickup.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="15" Column="2" />
+>>>>>>> Stashed changes
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

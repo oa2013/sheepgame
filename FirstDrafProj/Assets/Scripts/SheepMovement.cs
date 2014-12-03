@@ -83,4 +83,9 @@ public class SheepMovement : MonoBehaviour
 		anim.SetBool("sheepwalk",true);	
 		anim.SetBool("headnod", false);
 	}
+
+	void Lift()
+	{
+
+	}
 }

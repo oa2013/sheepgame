@@ -3,9 +3,11 @@ using System.Collections;
 
 public class SheepPickup : MonoBehaviour
 {
+	public GameObject	balloonSheep;
 	public Transform	sheepNode;
-	
-	bool		holdingSheep;
+
+	GameObject	sheep;
+	bool	holdingSheep;
 	
 	// Use this for initialization
 	void Start ()
@@ -16,17 +18,27 @@ public class SheepPickup : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if(Input.GetKeyDown(KeyCode.E))
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if(holdingSheep)
 		{
-			foreach(GameObject sheep in GameObject.FindGameObjectsWithTag("Sheep"))
+			if(Input.GetKeyDown(KeyCode.E) && other.tag == "Balloon")
 			{
-				print ((sheep.transform.position-gameObject.transform.position).magnitude);
-				if((sheep.transform.position-gameObject.transform.position).magnitude < 10 && !holdingSheep)
-				{
-					sheep.SendMessage("Lift",sheepNode);
-					holdingSheep = true;
-					break;
-				}
+				GameObject.Instantiate(balloonSheep,sheep.transform.position,sheep.transform.rotation);
+				Destroy(sheep);
+				holdingSheep = false;
+			}
+		}
+		else
+		{
+			if(Input.GetKeyDown(KeyCode.E) && other.tag == "Sheep")
+			{
+				sheep = other.gameObject;
+				sheep.transform.parent = sheepNode;
+				//sheep.SendMessage("Lift",sheepNode);
+				holdingSheep = true;
 			}
 		}
 	}
