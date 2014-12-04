@@ -47,10 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BalloonSheep.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerTimer.cs" />
+     <Compile Include="Assets\Scripts\SceneManager.cs" />
      <Compile Include="Assets\Scripts\SheepMovement.cs" />
      <Compile Include="Assets\Scripts\SheepPickup.cs" />
+     <Compile Include="Assets\Scripts\SimpleManager.cs" />
      <Compile Include="Assets\Scripts\girlController.cs" />
      <None Include="Assets\Mixamo\Shaders\Normal-BumpSpecGloss.shader" />
      <None Include="Assets\Standard Assets\water well\readme.txt" />

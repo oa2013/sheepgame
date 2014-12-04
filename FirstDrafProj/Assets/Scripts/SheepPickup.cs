@@ -7,7 +7,7 @@ public class SheepPickup : MonoBehaviour
 	public Transform	sheepNode;
 
 	GameObject	sheep;
-	bool	holdingSheep;
+	public bool	holdingSheep = false;
 	
 	// Use this for initialization
 	void Start ()
@@ -20,7 +20,7 @@ public class SheepPickup : MonoBehaviour
 	{
 	}
 
-	void OnTriggerEnter(Collider other)
+	void OnTriggerStay(Collider other)
 	{
 		if(holdingSheep)
 		{
@@ -33,8 +33,9 @@ public class SheepPickup : MonoBehaviour
 		}
 		else
 		{
-			if(Input.GetKeyDown(KeyCode.E) && other.tag == "Sheep")
+			if(Input.GetKey(KeyCode.E) && other.tag == "Sheep")
 			{
+				print ("pickup");
 				sheep = other.gameObject;
 				sheep.transform.parent = sheepNode;
 				//sheep.SendMessage("Lift",sheepNode);
