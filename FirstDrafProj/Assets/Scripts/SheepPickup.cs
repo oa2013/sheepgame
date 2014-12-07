@@ -38,6 +38,7 @@ public class SheepPickup : MonoBehaviour
 		{
 			if(Input.GetKeyDown(KeyCode.E) && other.tag == "Balloon")
 			{
+				other.audio.Play();
 				score = score+100;
 				GameObject.Instantiate(balloonSheep,sheep.transform.position,sheep.transform.rotation);
 				Destroy(sheep);
