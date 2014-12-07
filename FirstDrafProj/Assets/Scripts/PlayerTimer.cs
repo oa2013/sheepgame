@@ -47,6 +47,9 @@ public class PlayerTimer : MonoBehaviour {
 		int seconds = (int) t % 60; // calculate the seconds
 		int minutes = (int) t / 60; // calculate the minutes
 		string minSec = minutes + ":" + seconds; // create the formatted string
+		if (seconds < 10) {
+			minSec=minutes+":"+"0"+seconds; //fixing the awkward error that is Rukia's Mistake.
+		}
 	 	
 		SheepTimer.GetComponent<TextMesh>().text = minSec;
 
