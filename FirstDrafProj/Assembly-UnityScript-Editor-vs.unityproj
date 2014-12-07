@@ -74,7 +74,7 @@
      <None Include="Assets\Mixamo\Shaders\Mixamo-Lighting.cginc" />
      <None Include="Assets\Mixamo\Shaders\Transparent-Toon-MultiPass.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/RukiaB/Desktop/SheepFinal/sheepgame/FirstDrafProj/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/OA/Desktop/MasterFiles/USC_2011_2014/CSCE552/sheepgame/FirstDrafProj/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

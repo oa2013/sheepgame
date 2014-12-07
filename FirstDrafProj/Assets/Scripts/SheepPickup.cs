@@ -28,7 +28,7 @@ public class SheepPickup : MonoBehaviour
 		myStyle.normal.textColor = Color.white;
 		myStyle.font = (Font)Resources.Load("Fonts/Boingo");
 
-		GUI.Label(new Rect(10,10,100,20), "Score: " + score.ToString(), myStyle);
+		GUI.Label(new Rect(500,10,100,20), "Score: " + score.ToString(), myStyle);
 
 	}
 	
