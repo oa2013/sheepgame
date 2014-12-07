@@ -38,6 +38,7 @@ public class SheepPickup : MonoBehaviour
 		{
 			if(Input.GetKeyDown(KeyCode.E) && other.tag == "Balloon")
 			{
+				score = score+100;
 				GameObject.Instantiate(balloonSheep,sheep.transform.position,sheep.transform.rotation);
 				Destroy(sheep);
 				holdingSheep = false;
@@ -53,7 +54,7 @@ public class SheepPickup : MonoBehaviour
 				//sheep.SendMessage("Lift",sheepNode);
 				holdingSheep = true;
 
-				score = score+100;
+
 			}
 		}
 	}
