@@ -5,14 +5,15 @@ public class SheepPickup : MonoBehaviour
 {
 	public GameObject	balloonSheep;
 	public Transform	sheepNode;
-
 	GameObject	sheep;
 	public bool	holdingSheep = false;
-	
+
+	public int score = 0;
+	GUIStyle myStyle;
+
 	// Use this for initialization
 	void Start ()
 	{
-		
 	}
 	
 	// Update is called once per frame
@@ -20,6 +21,17 @@ public class SheepPickup : MonoBehaviour
 	{
 	}
 
+	void OnGUI()
+	{
+		myStyle = new GUIStyle();
+		myStyle.fontSize = 50;
+		myStyle.normal.textColor = Color.white;
+		myStyle.font = (Font)Resources.Load("Fonts/Boingo");
+
+		GUI.Label(new Rect(10,10,100,20), "Score: " + score.ToString(), myStyle);
+
+	}
+	
 	void OnTriggerStay(Collider other)
 	{
 		if(holdingSheep)
@@ -40,6 +52,8 @@ public class SheepPickup : MonoBehaviour
 				sheep.transform.parent = sheepNode;
 				//sheep.SendMessage("Lift",sheepNode);
 				holdingSheep = true;
+
+				score = score+100;
 			}
 		}
 	}
