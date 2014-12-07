@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum Scenes{Loading, MainMenu, Game};
+public enum Scenes{Loading, MainMenu, Level1, Level2, Level3};
 
 public class GameManager : MonoBehaviour
 {
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 	
 	}
 
-	void GoToNextScene()
+	public void GoToNextScene()
 	{
 		switch(currScene)
 		{
@@ -29,12 +29,16 @@ public class GameManager : MonoBehaviour
 			Application.LoadLevel("MainMenu");
 			break;
 		case Scenes.MainMenu:
-			currScene = Scenes.Game;
-			Application.LoadLevel("GameScene");
+			currScene = Scenes.Level1;
+			Application.LoadLevel("Level 1");
 			break;
-		case Scenes.Game:
-			currScene = Scenes.MainMenu;
-			Application.LoadLevel("MainMenu");
+		case Scenes.Level1:
+			currScene = Scenes.Level2;
+			Application.LoadLevel("Level 2");
+			break;
+		case Scenes.Level2:
+			currScene = Scenes.Level3;
+			Application.LoadLevel("Level 3");
 			break;
 		}
 	}

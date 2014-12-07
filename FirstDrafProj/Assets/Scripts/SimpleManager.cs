@@ -3,17 +3,15 @@ using System.Collections;
 
 public class SimpleManager : MonoBehaviour
 {
-	public string	enemyTag = "Enemy";
-	public string	playerTag = "Player";
-	public int		mainMenuIndex = 0;
-	public int		nextLevelIndex = 2;
-	public int		loseMenu = 3;
+	public GameManager upperManagement;
 
-	int numberOfEnemies;
+	public string	sheepTag = "Sheep";
+
+	int numberOfSheep;
 
 	// Use this for initialization
 	void Start ()
-	{	numberOfEnemies = GameObject.FindGameObjectsWithTag(enemyTag).Length;	}
+	{	numberOfSheep = GameObject.FindGameObjectsWithTag(sheepTag).Length;	}
 	
 	// Update is called once per frame
 	void Update ()
@@ -21,17 +19,16 @@ public class SimpleManager : MonoBehaviour
 	
 	}
 
-	void GODied(string goTag)
+	void SheepSent()
 	{
-		if(goTag == enemyTag)
-		{
-			numberOfEnemies -= 1;
+		numberOfSheep -= 1;
 
-			if(numberOfEnemies <= 0)
-			{	Application.LoadLevel(nextLevelIndex);	}
-		}
+		if(numberOfSheep == 0)
+		{	upperManagement.GoToNextScene();	}
+	}
 
-		if(goTag == playerTag)
-		{	Application.LoadLevel(loseMenu);	}
+	void SheepSetup()
+	{
+
 	}
 }

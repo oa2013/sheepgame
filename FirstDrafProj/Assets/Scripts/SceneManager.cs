@@ -3,38 +3,37 @@ using System.Collections;
 
 public class SceneManager : MonoBehaviour
 {
-	int numberOfEnemies;
-	public string enemyTag = "Enemy";
-	public string playerTag = "Player";
-	public int mainMenuIndex = 0;
-	public int nextLevelIndex = 2;
-	public int loseMenu = 3;
-
+	public GameManager upperManagement;
+	
+	string	sheepTag = "Sheep";
+	string	spawnTag = "Spawnpoint";
+	
+	int numberOfSheep;
+	
 	// Use this for initialization
-	void Start()
+	void Start ()
 	{
-		numberOfEnemies = GameObject.FindGameObjectsWithTag(enemyTag).Length;
+		upperManagement = GetComponent<GameManager>();
+
+		GameObject[] sheep = GameObject.FindGameObjectsWithTag(sheepTag);
+		numberOfSheep = sheep.Length;
+
+		GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag(spawnTag);
+		for(int i = 0; i < numberOfSheep; i += 1)
+		{	sheep[i].transform.position = spawnPoints[Random.Range(0,spawnPoints.Length)].transform.position;	}
 	}
 	
 	// Update is called once per frame
-	void Update()
+	void Update ()
 	{
+		
+	}
 	
-	}
-
-	void GODied(string goTag)
+	void SheepSent()
 	{
-		if(goTag == enemyTag)
-		{
-			numberOfEnemies -= 1;
-			if(numberOfEnemies <= 0)
-			{
-				Application.LoadLevel(nextLevelIndex);
-			}
-		}
-		if(goTag == playerTag)
-		{
-			Application.LoadLevel(loseMenu);
-		}
-	}
+		numberOfSheep -= 1;
+		
+		if(numberOfSheep == 0)
+		{	upperManagement.GoToNextScene();	}
+	}	
 }
