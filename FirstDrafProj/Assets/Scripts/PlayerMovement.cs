@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 	
 	void OnControllerColliderHit(ControllerColliderHit hit)
 	{
-		if(hit.gameObject.tag == "Ground")
+		if(controller.isGrounded)
 		{
 			girl.EndJump();
 			verticalSpeed = 0;

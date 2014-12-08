@@ -3,6 +3,9 @@ using System.Collections;
 
 public class SheepPickup : MonoBehaviour
 {
+	float sw;
+	float sh;
+
 	public GameObject	balloonSheep;
 	public Transform	sheepNode;
 	GameObject	sheep;
@@ -14,6 +17,8 @@ public class SheepPickup : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		sw = Screen.width;
+		sh = Screen.height;
 	}
 	
 	// Update is called once per frame
@@ -24,11 +29,11 @@ public class SheepPickup : MonoBehaviour
 	void OnGUI()
 	{
 		myStyle = new GUIStyle();
-		myStyle.fontSize = 50;
+		myStyle.fontSize = (int)sh/16;
 		myStyle.normal.textColor = Color.white;
 		myStyle.font = (Font)Resources.Load("Fonts/Boingo");
 
-		GUI.Label(new Rect(500,10,100,20), "Score: " + score.ToString(), myStyle);
+		GUI.Label(new Rect(sw/4-50,10,100,20), "Score: " + score.ToString(), myStyle);
 
 	}
 	

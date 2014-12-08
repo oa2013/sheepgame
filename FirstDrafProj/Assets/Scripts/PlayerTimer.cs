@@ -8,16 +8,20 @@ using System.Collections.Generic;
 public class PlayerTimer : MonoBehaviour {
 	
 	public GameObject SheepTimer;
+	float sw;
+	float sh;
 	float timer;
 	float timerXf=-5.218667f;
 	float timerYf=2.224511f;
 	float timerZf=0.6856623f;
 	GUIStyle timerStyle;
-
+	
 	void Start()
 	{
-		timer = 300;
+		sw = Screen.width;
+		sh = Screen.height;
 
+		timer = 300;
 		SheepTimer.transform.position.Set(timerXf,timerYf,timerZf);
 
 	}
@@ -25,10 +29,10 @@ public class PlayerTimer : MonoBehaviour {
 	void OnGUI () 
 	{
 		timerStyle = new GUIStyle();
-		timerStyle.fontSize = 100;
+		timerStyle.fontSize = (int)sh/8;
 		timerStyle.normal.textColor = Color.white;
 		timerStyle.font = (Font)Resources.Load("Fonts/sheeptype_0");
-		GUI.Label(new Rect(800,10,100,20), SheepTimer.GetComponent<TextMesh>().text, timerStyle);
+		GUI.Label(new Rect(sw/2-50,10,100,20), SheepTimer.GetComponent<TextMesh>().text, timerStyle);
 	}
 	
 	

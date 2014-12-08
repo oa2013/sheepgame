@@ -45,11 +45,22 @@ public class SheepMovement : MonoBehaviour
 			randTime = Random.Range(minActionTime,maxActionTime);
 		}
 		rigidbody.MovePosition (transform.position + transform.forward * currMoveSpeed * Time.deltaTime);
-		float t = (Time.time - stateTime)/4;
+		float t = (Time.time - stateTime)/2;
 		if(t <= 1)
 		{	transform.eulerAngles = Vector3.Lerp(startAngle,endAngle,t);	}
 		else
 		{	transform.eulerAngles = endAngle;	}
+	}
+
+	void OnCollisionEnter(Collision other)
+	{
+		if(other.gameObject.tag == "Fence")
+		{
+			if(transform.rotation.y < 180)
+			{	endAngle = new Vector3(0,transform.eulerAngles.y + 180,0);	}
+			else
+			{	endAngle = new Vector3(0,transform.eulerAngles.y - 180,0);	}
+		}
 	}
 
 	void SwitchStates()

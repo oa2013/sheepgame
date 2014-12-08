@@ -4,34 +4,24 @@ using System.Collections;
 public class BalloonSheep : MonoBehaviour {
 	
 	public Transform target;
-	public float speed=2;
-	float sheepX=-1.7813109f;
-	float LandZoneX=1252.208f;
-	float LandZoneY=32.74061f;
-	float LandZoneZ=642.4691f;
-	
-	public GameObject BalloonSheepClone;
+	public float speed;
+	public float lift;
+
 	public GameObject Sheep;
-	public GameObject LandingZone;
 	public GameObject CloneSheep;
 	
 	void  Start()
 	{
-		LandingZone = GameObject.FindGameObjectWithTag("LandingZone");
-		Sheep = GameObject.FindGameObjectWithTag ("Sheep");
-		target = LandingZone.transform;
+		target = GameObject.FindGameObjectWithTag("LandingZone").transform;
+		lift = Mathf.Sqrt (Mathf.Pow (transform.position.x - target.transform.position.x, 2) + Mathf.Pow (transform.position.z - target.transform.position.z, 2))/(Mathf.Abs(transform.position.y-target.transform.position.y+1)*3);
 	}
 	
 	void Update() {
-		LandingZone.transform.position.Set( LandZoneX, LandZoneY,LandZoneZ);
 		speed = 2;
-		Sheep = GameObject.FindGameObjectWithTag ("Sheep");
-		
-		
-		float step = speed * Time.deltaTime;
-		transform.Translate(Vector3.up * Time.deltaTime, Space.World);
-		transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-		transform.position.Set (sheepX, transform.position.y, transform.position.z);
+		lift = Mathf.Sqrt (Mathf.Pow (transform.position.x - target.transform.position.x, 2) + Mathf.Pow (transform.position.z - target.transform.position.z, 2))/(Mathf.Abs(transform.position.y-target.transform.position.y+1)*3);
+
+		transform.Translate(Vector3.up * lift * Time.deltaTime, Space.World);
+		transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 		if ((transform.position - target.transform.position).magnitude < .25) 
 		{
 			CloneSheep = Instantiate(Sheep, transform.position, transform.rotation) as GameObject;
