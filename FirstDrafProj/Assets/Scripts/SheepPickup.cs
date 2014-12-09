@@ -40,7 +40,7 @@ public class SheepPickup : MonoBehaviour
 		myStyle.normal.textColor = Color.white;
 		myStyle.font = (Font)Resources.Load("Fonts/Boingo");
 
-		GUI.Label(new Rect(sw/4-50,10,100,20), "Score: " + score.ToString(), myStyle);
+		GUI.Label(new Rect(sw/7,10,100,20), "Score: " + score.ToString(), myStyle);
 
 		if(isNearSheep) 
 		{
@@ -90,7 +90,7 @@ public class SheepPickup : MonoBehaviour
 				sheep.transform.parent = sheepNode;
 				//sheep.SendMessage("Lift",sheepNode);
 				holdingSheep = true;
-
+				isNearSheep = false;
 
 			}
 		}
