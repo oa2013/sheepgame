@@ -66,7 +66,7 @@ public class SheepPickup : MonoBehaviour
 		{
 			newTimer += Time.deltaTime;
 			
-			if(newTimer > 2)
+			if(newTimer > 3)
 			{
 				isNearSheep = false;
 			}

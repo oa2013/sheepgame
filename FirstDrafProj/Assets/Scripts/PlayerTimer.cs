@@ -12,14 +12,14 @@ public class PlayerTimer : MonoBehaviour
 	float sw;
 	float sh;
 
-	float timer;
+	public float timer = 600; //default: 600
 
 	GUIStyle timerStyle;
 	GUIStyle directionsStyle;
 
 	bool showDirections;
 	bool jump;
-
+	
 	void Start()
 	{
 		sw = Screen.width;
@@ -37,7 +37,6 @@ public class PlayerTimer : MonoBehaviour
 		directionsStyle.normal.textColor = Color.white;
 		directionsStyle.font = (Font)Resources.Load("Fonts/Boingo");
 
-		timer = 600;
 	}
 
 	void OnGUI () 
@@ -69,16 +68,17 @@ public class PlayerTimer : MonoBehaviour
 
 	void Update()
 	{
-		if(timer <= 0)
-		{	Debug.Log("GAME OVER");	}
-		else
-		{	timer -= Time.deltaTime;	}
+		if(timer > 0)
+		{
+			timer -= Time.deltaTime;
+		}
 
 		float t = Mathf.Abs(timer); // get the absolute timer value
 		int seconds = (int) t % 60; // calculate the seconds
 		int minutes = (int) t / 60; // calculate the minutes
 		string minSec = minutes + ":" + seconds; // create the formatted string
-		if (seconds < 10)
+
+		if(seconds < 10)
 		{	minSec=minutes+":"+"0"+seconds;	}
 	 	
 		if(isMoving()) 
@@ -88,6 +88,13 @@ public class PlayerTimer : MonoBehaviour
 		{	jump = false;	}
 
 		text = minSec;
+
+		if(timer <= 0)
+		{	
+			Debug.Log("Done");
+			Application.LoadLevel("GameOver");
+		}
 	}
+
 
 }
