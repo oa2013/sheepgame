@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LoadGame.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SheepPickup.cs">
     <Files>
-      <File FileName="Assets\Scripts\LoadGame.cs" Line="11" Column="2" />
+      <File FileName="Assets\Scripts\PlayerTimer.cs" Line="101" Column="3" />
+      <File FileName="Assets\Scripts\SheepPickup.cs" Line="78" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
