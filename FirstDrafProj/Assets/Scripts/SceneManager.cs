@@ -39,6 +39,7 @@ public class SceneManager : MonoBehaviour
 	// Update is called once per frame
 	void OnGUI ()
 	{
+		print (sw * 3 / 4);
 		GUI.DrawTexture(new Rect(sw*3/4,10,256,128),counter);
 		GUI.Label(new Rect(sw*3/4+160,25,10,10),numberOfSheep.ToString(),counterStyle);
 	}

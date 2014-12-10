@@ -100,6 +100,7 @@ public class SheepPickup : MonoBehaviour
 		{
 			upperManagement.score = upperManagement.score+50;
 			Destroy(other.gameObject);
+			isNearSheep = false;
 		}
 	}
 }

@@ -17,9 +17,10 @@ public class PlayerTimer : MonoBehaviour
 	GUIStyle timerStyle;
 	GUIStyle directionsStyle;
 
-	bool showDirections;
-	bool jump;
-
+	bool	showDirections;
+	bool	jump;
+	bool	firstLevel;
+	
 	Texture arrowKeys;
 	Texture spaceKey;
 	
@@ -29,6 +30,7 @@ public class PlayerTimer : MonoBehaviour
 		sh = Screen.height;
 		showDirections = true;
 		jump = true;
+		firstLevel = GameObject.Find("SceneManager").GetComponent<SceneManager>().firstLevel;
 
 		timerStyle = new GUIStyle();
 		timerStyle.fontSize = (int)sh/8;
@@ -48,11 +50,14 @@ public class PlayerTimer : MonoBehaviour
 	{
 		GUI.Label(new Rect(sw*3/8,10,100,20), text, timerStyle);
 
-		if(showDirections)
-		{  GUI.DrawTexture(new Rect (sw*1/2 - 275, sh*1/16, 550, 300), arrowKeys);	}
-		
-		if(jump) 
-		{   GUI.DrawTexture (new Rect (sw*1/2 - 150, sh*3/7, 300, 100), spaceKey);	}
+		if(firstLevel)
+		{
+			if(showDirections)
+			{  GUI.DrawTexture(new Rect (sw*1/2 - 275, sh*1/16, 550, 300), arrowKeys);	}
+			
+			if(jump) 
+			{   GUI.DrawTexture (new Rect (sw*1/2 - 150, sh*3/7, 300, 100), spaceKey);	}
+		}
 	}
 	
 	bool isMoving()

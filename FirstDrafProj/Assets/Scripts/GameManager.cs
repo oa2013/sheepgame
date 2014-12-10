@@ -28,23 +28,23 @@ public class GameManager : MonoBehaviour
 		{
 		case Scenes.Loading:
 			currScene = Scenes.MainMenu;
-			Application.LoadLevel("MainMenu");
+			Application.LoadLevel(0);
 			break;
 		case Scenes.MainMenu:
 			currScene = Scenes.Level1;
-			Application.LoadLevel("Level 1");
+			Application.LoadLevel(1);
 			break;
 		case Scenes.Level1:
 			currScene = Scenes.Level2;
-			Application.LoadLevel("Level 2");
+			Application.LoadLevel(2);
 			break;
 		case Scenes.Level2:
 			currScene = Scenes.Level3;
-			Application.LoadLevel("Level 3");
+			Application.LoadLevel(3);
 			break;
 		case Scenes.Level3:
 			currScene = Scenes.MainMenu;
-			Application.LoadLevel("MainMenu");
+			Application.LoadLevel(0);
 			break;
 		}
 	}

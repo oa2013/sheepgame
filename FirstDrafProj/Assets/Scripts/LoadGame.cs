@@ -13,7 +13,7 @@ public class LoadGame : MonoBehaviour
 	{
 		if (GameObject.Find ("Start")) 
 		{
-			Application.LoadLevel("Level1");
+			GameObject.Find("GameManager").GetComponent<GameManager>().GoToNextScene();
 		}
 	}
 
