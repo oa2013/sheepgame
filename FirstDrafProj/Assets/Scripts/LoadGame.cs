@@ -13,7 +13,7 @@ public class LoadGame : MonoBehaviour
 	{
 		if (GameObject.Find ("Start")) 
 		{
-			Application.LoadLevel("MainScene");
+			Application.LoadLevel("Level1");
 		}
 	}
 
