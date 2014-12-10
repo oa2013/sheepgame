@@ -49,10 +49,10 @@ public class PlayerTimer : MonoBehaviour
 		GUI.Label(new Rect(sw*3/8,10,100,20), text, timerStyle);
 
 		if(showDirections)
-		{  GUI.DrawTexture(new Rect (sw*9/32, sh*1/16, 550, 300), arrowKeys);	}
+		{  GUI.DrawTexture(new Rect (sw*1/2 - 275, sh*1/16, 550, 300), arrowKeys);	}
 		
 		if(jump) 
-		{   GUI.DrawTexture (new Rect (sw*9/24, sh*3/7, 300, 100), spaceKey);	}
+		{   GUI.DrawTexture (new Rect (sw*1/2 - 150, sh*3/7, 300, 100), spaceKey);	}
 	}
 	
 	bool isMoving()

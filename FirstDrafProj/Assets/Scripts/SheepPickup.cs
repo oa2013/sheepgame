@@ -8,11 +8,11 @@ public class SheepPickup : MonoBehaviour
 	public Transform	sheepNode;
 
 	public bool	holdingSheep = false;
-	public int	score = 0;
 
 	GameObject		sheep;
 	GUIStyle		myStyle;
 	Texture			eKey;
+	GameManager		upperManagement;
 	SceneManager	manager;
 	PlayerTimer		timer;
 
@@ -27,6 +27,7 @@ public class SheepPickup : MonoBehaviour
 	{
 		sw = Screen.width;
 		sh = Screen.height;
+		upperManagement = GameObject.Find("GameManager").GetComponent<GameManager>();
 		manager = GameObject.Find ("SceneManager").GetComponent<SceneManager> ();
 		timer = GameObject.Find("SheepTimer").GetComponent<PlayerTimer>();
 		isNearSheep = false;
@@ -47,7 +48,7 @@ public class SheepPickup : MonoBehaviour
 
 	void OnGUI()
 	{
-		GUI.Label(new Rect(sw/16,10,100,20), "Score: " + score.ToString(), myStyle);
+		GUI.Label(new Rect(sw/16,10,100,20), "Score: " + upperManagement.score.ToString(), myStyle);
 
 		if(isNearSheep) 
 		{	GUI.DrawTexture (new Rect (sw*2/5, sh / 2, 100, 100), eKey);	}
@@ -75,7 +76,7 @@ public class SheepPickup : MonoBehaviour
 			if(Input.GetKeyDown(KeyCode.E) && other.tag == "Balloon")
 			{
 				other.audio.Play();
-				score = score+100+(int)timer.timer/10;
+				upperManagement.score = upperManagement.score+100+(int)timer.timer/10;
 				GameObject.Instantiate(balloonSheep,sheep.transform.position,sheep.transform.rotation);
 				Destroy(sheep);
 				manager.SheepSent();
@@ -97,7 +98,7 @@ public class SheepPickup : MonoBehaviour
 		}
 		if(Input.GetKey(KeyCode.E) && other.tag == "Toy")
 		{
-			score = score+50;
+			upperManagement.score = upperManagement.score+50;
 			Destroy(other.gameObject);
 		}
 	}

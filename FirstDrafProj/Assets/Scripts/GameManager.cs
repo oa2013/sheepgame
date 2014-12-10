@@ -5,12 +5,14 @@ public enum Scenes{Loading, MainMenu, Level1, Level2, Level3};
 
 public class GameManager : MonoBehaviour
 {
+	public int score;
 	Scenes currScene;
 
 	// Use this for initialization
 	void Start ()
 	{
 		DontDestroyOnLoad(gameObject);
+		score = 0;
 		currScene = Scenes.MainMenu;
 	}
 	
@@ -39,6 +41,10 @@ public class GameManager : MonoBehaviour
 		case Scenes.Level2:
 			currScene = Scenes.Level3;
 			Application.LoadLevel("Level 3");
+			break;
+		case Scenes.Level3:
+			currScene = Scenes.MainMenu;
+			Application.LoadLevel("MainMenu");
 			break;
 		}
 	}

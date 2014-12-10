@@ -19,7 +19,7 @@ public class SceneManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		upperManagement = GetComponent<GameManager>();
+		upperManagement = GameObject.Find("GameManager").GetComponent<GameManager>();
 
 		sw = Screen.width;
 		sh = Screen.height;
@@ -40,7 +40,7 @@ public class SceneManager : MonoBehaviour
 	void OnGUI ()
 	{
 		GUI.DrawTexture(new Rect(sw*3/4,10,256,128),counter);
-		GUI.Label(new Rect(sw*7/8,20,10,10),numberOfSheep.ToString(),counterStyle);
+		GUI.Label(new Rect(sw*3/4+160,25,10,10),numberOfSheep.ToString(),counterStyle);
 	}
 	
 	public void SheepSent()
