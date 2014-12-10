@@ -19,6 +19,8 @@ public class PlayerTimer : MonoBehaviour
 
 	bool showDirections;
 	bool jump;
+
+	Texture arrowKeys;
 	
 	void Start()
 	{
@@ -37,6 +39,8 @@ public class PlayerTimer : MonoBehaviour
 		directionsStyle.normal.textColor = Color.white;
 		directionsStyle.font = (Font)Resources.Load("Fonts/Boingo");
 
+		arrowKeys = (Texture)Resources.Load ("arrowKeys");
+
 	}
 
 	void OnGUI () 
@@ -44,10 +48,10 @@ public class PlayerTimer : MonoBehaviour
 		GUI.Label(new Rect(sw*2/5,10,100,20), text, timerStyle);
 
 		if(showDirections)
-		{  GUI.Label (new Rect (sw / 2 - 300, sh / 2, 100, 20), "Use the arrow keys to move the girl", directionsStyle);	}
+		{  GUI.DrawTexture(new Rect (sw / 2 - 300, sh / 2-300, 620, 372), arrowKeys);	}
 		
 		if(jump) 
-		{   GUI.Label (new Rect (sw / 2 - 300, (sh / 2)+70, 100, 20), "Press space to jump", directionsStyle);	}
+		{   GUI.Label (new Rect (sw / 2 - 190, (sh / 2)+25, 100, 20), "Press space to jump", directionsStyle);	}
 	}
 	
 	bool isMoving()

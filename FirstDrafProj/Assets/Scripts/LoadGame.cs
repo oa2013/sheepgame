@@ -9,7 +9,7 @@ public class LoadGame : MonoBehaviour
 
 	}
 
-	void OnMouseOver()
+	void OnMouseDown() //click
 	{
 		if (GameObject.Find ("Start")) 
 		{
