@@ -3,29 +3,41 @@ using System.Collections;
 
 public class SheepPickup : MonoBehaviour
 {   
-	PlayerTimer timer;
-	float sw;
-	float sh;
 
 	public GameObject	balloonSheep;
 	public Transform	sheepNode;
-	GameObject	sheep;
+
 	public bool	holdingSheep = false;
+	public int	score = 0;
 
-	public int score = 0;
-	GUIStyle myStyle;
-	bool isNearSheep;
+	GameObject		sheep;
+	GUIStyle		myStyle;
+	Texture			eKey;
+	SceneManager	manager;
+	PlayerTimer		timer;
 
-	float newTimer; 
-	float onlyOnce = 0;
+	float	sw;
+	float	sh;
+	float	newTimer; 
+	bool	isNearSheep;
+	bool	firstLevel;
 
 	// Use this for initialization
 	void Start ()
 	{
 		sw = Screen.width;
 		sh = Screen.height;
+		manager = GameObject.Find ("SceneManager").GetComponent<SceneManager> ();
 		timer = GameObject.Find("SheepTimer").GetComponent<PlayerTimer>();
 		isNearSheep = false;
+		firstLevel = manager.firstLevel;
+
+		eKey = (Texture)Resources.Load ("eKey");
+
+		myStyle = new GUIStyle();
+		myStyle.fontSize = (int)sh/16;
+		myStyle.normal.textColor = Color.white;
+		myStyle.font = (Font)Resources.Load("Fonts/Boingo");
 	}
 	
 	// Update is called once per frame
@@ -35,57 +47,46 @@ public class SheepPickup : MonoBehaviour
 
 	void OnGUI()
 	{
-		myStyle = new GUIStyle();
-		myStyle.fontSize = (int)sh/16;
-		myStyle.normal.textColor = Color.white;
-		myStyle.font = (Font)Resources.Load("Fonts/Boingo");
-
-		GUI.Label(new Rect(sw/7,10,100,20), "Score: " + score.ToString(), myStyle);
+		GUI.Label(new Rect(sw/16,10,100,20), "Score: " + score.ToString(), myStyle);
 
 		if(isNearSheep) 
-		{
-			GUI.Label (new Rect (sw / 2 - 300, sh / 2, 100, 20), "Press E to pick up the sheep", myStyle);
-		}
+		{	GUI.DrawTexture (new Rect (sw*2/5, sh / 2, 100, 100), eKey);	}
 
 	}
 
 	void OnTriggerEnter(Collider col)
 	{
-		if(col.tag == "Sheep" && onlyOnce == 0)
-		{
-			onlyOnce++;
-			isNearSheep = true;
-		}
+		if(firstLevel && (col.tag == "Sheep" || col.tag == "Balloon" || col.tag == "Toy"))
+		{	isNearSheep = true;	}
 
 	}
-	
+
+	void OnTriggerExit(Collider other)
+	{
+		if(firstLevel && (other.tag == "Sheep" || other.tag == "Balloon" || other.tag == "Toy"))
+		{	isNearSheep = false;	}
+	}
 		
 	void OnTriggerStay(Collider other)
 	{
 		if(holdingSheep)
 		{
-			newTimer += Time.deltaTime;
-			
-			if(newTimer > 3)
-			{
-				isNearSheep = false;
-			}
-
 
 			if(Input.GetKeyDown(KeyCode.E) && other.tag == "Balloon")
 			{
 				other.audio.Play();
-				score = score+100;
+				score = score+100+(int)timer.timer/10;
 				GameObject.Instantiate(balloonSheep,sheep.transform.position,sheep.transform.rotation);
 				Destroy(sheep);
+				manager.SheepSent();
 				holdingSheep = false;
+				isNearSheep = false;
 			}
 		}
 		else
 		{
 			if(Input.GetKey(KeyCode.E) && other.tag == "Sheep")
 			{
-				print ("pickup");
 				sheep = other.gameObject;
 				sheep.transform.parent = sheepNode;
 				//sheep.SendMessage("Lift",sheepNode);
@@ -93,6 +94,11 @@ public class SheepPickup : MonoBehaviour
 				isNearSheep = false;
 
 			}
+		}
+		if(Input.GetKey(KeyCode.E) && other.tag == "Toy")
+		{
+			score = score+50;
+			Destroy(other.gameObject);
 		}
 	}
 }

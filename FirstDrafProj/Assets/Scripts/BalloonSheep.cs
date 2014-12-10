@@ -25,6 +25,7 @@ public class BalloonSheep : MonoBehaviour {
 		if ((transform.position - target.transform.position).magnitude < .25) 
 		{
 			CloneSheep = Instantiate(Sheep, transform.position, transform.rotation) as GameObject;
+			CloneSheep.tag = "Untagged";
 			DestroyObject(gameObject);
 		}
 	}

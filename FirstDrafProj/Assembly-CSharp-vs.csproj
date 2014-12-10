@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\LoadGame.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerTimer.cs" />
+     <Compile Include="Assets\Scripts\Radar.cs" />
      <Compile Include="Assets\Scripts\SceneManager.cs" />
      <Compile Include="Assets\Scripts\SheepMovement.cs" />
      <Compile Include="Assets\Scripts\SheepPickup.cs" />

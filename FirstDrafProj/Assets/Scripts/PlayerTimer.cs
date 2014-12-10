@@ -21,6 +21,7 @@ public class PlayerTimer : MonoBehaviour
 	bool jump;
 
 	Texture arrowKeys;
+	Texture spaceKey;
 	
 	void Start()
 	{
@@ -40,34 +41,34 @@ public class PlayerTimer : MonoBehaviour
 		directionsStyle.font = (Font)Resources.Load("Fonts/Boingo");
 
 		arrowKeys = (Texture)Resources.Load ("arrowKeys");
-
+		spaceKey = (Texture)Resources.Load ("spaceKey");
 	}
 
 	void OnGUI () 
 	{
-		GUI.Label(new Rect(sw*2/5,10,100,20), text, timerStyle);
+		GUI.Label(new Rect(sw*3/8,10,100,20), text, timerStyle);
 
 		if(showDirections)
-		{  GUI.DrawTexture(new Rect (sw / 2 - 300, sh / 2-300, 620, 372), arrowKeys);	}
+		{  GUI.DrawTexture(new Rect (sw*9/32, sh*1/16, 550, 300), arrowKeys);	}
 		
 		if(jump) 
-		{   GUI.Label (new Rect (sw / 2 - 190, (sh / 2)+25, 100, 20), "Press space to jump", directionsStyle);	}
+		{   GUI.DrawTexture (new Rect (sw*9/24, sh*3/7, 300, 100), spaceKey);	}
 	}
 	
 	bool isMoving()
 	{
 		if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) 
-		{	return true;	}
-		else
 		{	return false;	}
+		else
+		{	return true;	}
 	}
 
 	bool isJumping()
 	{
 		if(Input.GetKeyDown(KeyCode.Space))
-		{	return true;	}
-		else
 		{	return false;	}
+		else
+		{	return true;	}
 	}
 
 	void Update()
@@ -85,11 +86,11 @@ public class PlayerTimer : MonoBehaviour
 		if(seconds < 10)
 		{	minSec=minutes+":"+"0"+seconds;	}
 	 	
-		if(isMoving()) 
-		{	showDirections = false;	}
+		if(showDirections)
+		{	showDirections = isMoving();	}
 
-		if (isJumping ()) 
-		{	jump = false;	}
+		if(jump) 
+		{	jump = isJumping();	}
 
 		text = minSec;
 
